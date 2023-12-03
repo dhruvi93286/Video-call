@@ -1,0 +1,127 @@
+main {
+    width: 100vw;
+    height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black);
+    transition: width .25s;
+  }
+  
+  video {
+    background-color: black;  
+    max-height: 100%;
+    max-width: 100%;
+  }
+  
+  /* enable audio/video, share shreen */
+  .media-controls {
+    height: 70px;
+    background-color: transparent;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px 15px;
+    overflow: hidden;
+  }
+  
+  .media-controls>div {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .media-controls>div:first-child {  
+    justify-content: flex-start;
+  }
+  
+  .media-controls>div:last-child {
+    justify-content: flex-end;
+  }
+  
+  .media-controls button {
+    font-size: 1.5rem;
+    color: rgb(190, 190, 190);
+    padding: 0 15px;
+    cursor: pointer;
+  }
+  /************ chat-box *************/
+  ul {list-style: none; margin: 0; padding: 0; overflow: auto; }
+  
+  .chat-box {
+    width: 320px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    display: grid;
+    grid-template-rows: 8% 82% 10%;
+    background-color: rgb(100, 100, 100);
+    transition: width .25s;
+  }
+  
+  .chat-box header, .chat-box ul {
+    padding: 10px 25px;
+  }
+  
+  .chat-box header {
+    background-color: var(--dark);
+  }
+  
+  .chat-box li {
+    font-size: 14px;
+    padding-bottom: 10px;
+  }
+  
+  .chat-box input ,.chat-box form button{
+    color: var(--white); 
+    background-color: var(--dark); 
+    border-radius: 0;
+    outline: none; border: 0;
+  }
+  
+  .chat-box form button {
+    height: 100%;  
+    font-size: 20px;
+    padding: 0 15px;
+  }
+  /************ media grid *************/
+  .media-grid-1 {
+    display: grid;
+    grid-template-columns: repeat(1, calc(100vw / 1.2));
+    grid-template-rows: repeat(1, calc(100vh / 1.5));
+    align-content: center;
+    gap: 20px;
+  }
+  
+  .media-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, calc(100vw / 3));
+    align-content: center;
+    gap: 20px;
+  }
+  
+  .media-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(2, calc(100vw / 3));
+    grid-template-rows: repeat(2, calc(100vh / 2.2));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .media-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(2, calc(100vw / 3));
+    grid-template-rows: repeat(2, calc(100vh / 2.2));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .media-grid-5 {
+    display: grid;
+    grid-template-columns: repeat(2, calc(100vw / 3));
+    grid-template-rows: repeat(2, calc(100vh / 2.2));
+    gap: 20px;
+    padding: 20px;
+  }
